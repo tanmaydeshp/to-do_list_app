@@ -13,7 +13,7 @@ body{
 form{
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -27,3 +27,24 @@ input, h1, h3{
     
 }
 
+.flashes li.error {
+    background-color: red;
+}
+
+.flashes li.success {
+    background-color: green;
+}
+
+
+.flashes li.message{
+    background-color: lightblue;
+    list-style-type: none;
+    padding: 0;
+}
+
+.flashes li {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: black;
+}

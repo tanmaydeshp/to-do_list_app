@@ -6,3 +6,7 @@ function delete_task(taskID) {
       window.location.href = "/todos";
     });
   }
+
+function close(){
+  fetch(window.location.href, {method: "GET"})
+};

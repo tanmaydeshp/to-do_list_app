@@ -31,6 +31,6 @@ def delete_task():
         if task.user_id == current_user.id:
             db.session.delete(task)
             db.session.commit()
-            flash("Deleted!")
+            flash("Task deleted!", category="success")
 
     return jsonify({})

@@ -18,9 +18,9 @@ def login():
                 flash("Logged in successfully!", category="success")
                 return redirect(url_for("views.todos"))
             else:
-                flash("Incorrect password!", category="error")
+                flash("Incorrect email or password!", category="error")
         else:
-            flash("Incorrect email!", category="error")
+            flash("Incorrect email or password!", category="error")
     return render_template('login.html', user=current_user)
 
 @auth.route('/register/', methods=['GET', 'POST'])
@@ -49,4 +49,5 @@ def register():
 @auth.route('/logout/')
 def logout():
     logout_user()
+    flash("Logged out successfully!", category="success")
     return redirect(url_for("auth.login"))
