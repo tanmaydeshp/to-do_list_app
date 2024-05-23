@@ -49,9 +49,9 @@
           </nav>
           {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
-    <ul class="flashes">
+    <ul class="flashes" id="hideMe">
     {% for category, message in messages %}
-      <li class="{{ category }}">{{ message }}<button type="button" method="GET" class="btn-close btn-close-white" aria-label="Close" data-bs-dismiss="alert"></button></li>
+      <li class="{{ category }}">{{ message }}</li>
     {% endfor %}
     </ul>
   {% endif %}

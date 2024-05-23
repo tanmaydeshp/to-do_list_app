@@ -31,7 +31,7 @@ def register():
         password1 = request.form.get('pwd')
         password2 = request.form.get('pwd2')
         if User.query.filter_by(email=email).first():
-            flash("There already exists an account with this email!")
+            flash("There already exists an account with this email!", category="error")
         elif len(email)< 4 or len(username) < 2:
             flash("Email or username too short!", category="error")
         elif password1 != password2:
