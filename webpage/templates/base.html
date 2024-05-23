@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
+     
         <!--navbar code from Bootstrap: https://getbootstrap.com/docs/4.0/components/navbar/ -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="">To-Do List</a>
@@ -52,7 +53,11 @@
   {%endwith%}
           <!--Bootstrap JS included below: https://getbootstrap.com/ -->
           {% block content %}{% endblock %}
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+          <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      </body>
           <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
         </body>
     </html>
