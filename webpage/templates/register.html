@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<form method="POST", action="">
+    <label for="usr">Username</label>
+<input type="text" id="usr" placeholder="Username" name="usr">
+<label for="em">Email</label>
+<input type="email" id="em" placeholder="Email Address" name="em">
+<label for="pwd">Password</label>
+<input type="password" id="pwd" placeholder="Password" name="pwd">
+<label for="pwd2">Repeat Password</label>
+<input type="password" id="pwd2" placeholder="Repeat Password" name="pwd2">    
+<button name="submit" id="submit" type="submit">Submit</button>
+</form>
+
+{% endblock %}

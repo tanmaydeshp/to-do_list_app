@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Your Tasks{% endblock %}
+{% block content %}
+<h1 align="center">{{ user.username }}'s Current Tasks:</h1>
+<ul class="to-do list">
+    {% if user.tasks %}
+{% for items in user.tasks %}
+{% if items %}
+<li class="task">
+{{ items.text }}
+<button type="button" class="close" name="delete" onclick="delete_task({{ items.id }})">
+  <span aria-hidden="true">&times;</span>
+  </button>
+</li>
+{% endif %}    
+{% endfor %}
+{% endif %}
+</ul>
+<form action="" method="POST">
+<div align="center">
+<textarea placeholder="Enter task" name="tasktxt" id="tasktxt"></textarea>
+<br>
+<button type="submit" name="addtask" id="addtask">Add Task</button>
+</div> 
+</form>
+{% endblock %}
