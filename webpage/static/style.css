@@ -73,3 +73,24 @@ input, h1, h3{
     margin: 3%;
 }
 
+.to-do-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right,lightgreen,  #165204);
+    /*White box shadow code: https://stackoverflow.com/questions/16116319/how-to-create-white-css-box-shadow */
+    -moz-box-shadow: 1px 1px 0px 0px #FFFFFF;
+    -webkit-box-shadow: 1px 1px 0px 0px #FFFFFF;
+     box-shadow: 1px 1px 0px 0px  #FFFFFF;
+     gap: 5%
+    
+}
+.task{
+    list-style: none;
+    border: black;
+}
+hr{
+    width:10px;
+    color: black
+}

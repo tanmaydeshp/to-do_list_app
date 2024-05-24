@@ -4,18 +4,17 @@
 <div class="heading"><h1>Tasks</h1></div>
 <br>
 <div class="main">
-<h3>{{ user.username }}'s Current Tasks:</h3>
 <br>
 <ul class="to-do-list">
     {% if user.tasks %}
 {% for items in user.tasks %}
 {% if items %}
+<div class="taskdiv">
 <li class="task">
-{{ items.text }}
-<button type="button" class="close" name="delete" onclick="delete_task({{ items.id }})">
-  <span aria-hidden="true">&times;</span>
-  </button>
+{{ items.text }} <button type="button" class="btn-close" name="delete" onclick="delete_task({{ items.id }})">
+</button>
 </li>
+</div>
 {% endif %}    
 {% endfor %}
 {% endif %}
