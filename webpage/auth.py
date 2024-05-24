@@ -36,6 +36,8 @@ def register():
             flash("Email or username too short!", category="error")
         elif password1 != password2:
             flash("Passwords don't match!", category="error")
+        elif len(password1)< 4 or len(password2) < 2:
+            flash("Password too short!", category="error")
         else:
             user = User(email=email, password=generate_password_hash(password1), username=username)
             db.session.add(user)

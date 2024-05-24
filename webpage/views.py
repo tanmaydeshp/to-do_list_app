@@ -16,9 +16,12 @@ def home():
 def todos():
     if request.method == "POST":
         description = request.form.get('tasktxt')
-        task = Task(text=description, date= date.today(), user_id=current_user.id)
-        db.session.add(task)
-        db.session.commit()
+        if len(description) <= 0:
+            flash("No task entered!", category="error")
+        else:
+            task = Task(text=description, date= date.today(), user_id=current_user.id)
+            db.session.add(task)
+            db.session.commit()
     return render_template('todos.html', user=current_user)
 
 @views.route('/delete_task/', methods=["POST"])
